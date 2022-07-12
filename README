@@ -1,3 +1,9 @@
+感谢大表哥提供主控和节点服务器特此广告：
+
+感谢OK源码中国网提供，（https://vsok.net)精品资源源码请去OK源码中国下载
+
+推荐服务器商；OVZH服务商，官网（https://ovzh.com）
+
 1.
 vim /etc/hosts
 0.0.0.0  auth.cdnfly.cn
@@ -9,3 +15,7 @@ curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o age
 
 修改为你自身安装节点,或使用默认的github节点安装
 /opt/cdnfly/master/panel/src/views/system/update/index.html
+
+感谢OK源码中国网提供，（https://vsok.net)精品资源源码请去OK源码中国下载
+
+推荐服务器商；OVZH服务商，官网（https://ovzh.com）OVZH最近活动；https://reurl.cc/6Z1WWZ
