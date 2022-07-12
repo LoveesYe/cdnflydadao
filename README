@@ -22,3 +22,23 @@ curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh 
 感谢OK源码中国网提供，（https://vsok.net) 精品资源源码请去OK源码中国下载
 
 推荐服务器商；OVZH服务商，官网（https://ovzh.com） OVZH最近活动: https://reurl.cc/6Z1WWZ
+
+主控登录地址为: http://主控IP/
+管理员账号和密码： admin/cdnfly
+普通用户账号和密码： jason/cdnfly
+
+服务器配置要求
+
+主控
+1.内存 - 因为主控安装有Elasticsearch，推荐16G及以上，如果网站访问量比较小，8G也行，至少4G。
+2.硬盘 - 建议固态硬盘, 同样考虑访问日志大小，推荐100G及以上，量小的话都可以。
+3.CPU - CPU至少2核
+4.开放80 88 9200端口
+节点
+
+1.内存 - 至少2G及以上
+2.硬盘 - 根据网站缓存的大小配置
+3.CPU - Nginx主要是跑CPU，所以要想访问性能好，CPU尽量好点。
+4.开放80 443 5000端口
+系统
+目前仅支持Centos-7(Ubuntu暂时无离线包)
