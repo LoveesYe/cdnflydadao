@@ -5,6 +5,7 @@
 推荐服务器商；OVZH服务商，官网（https://ovzh.com）
 
 1.主控服务器
+web目录为验证文件，请自行搭建
 0.0.0.0改成(自己搭建的验证服务器Ip)
 vi /etc/hosts
 0.0.0.0  auth.cdnfly.cn
