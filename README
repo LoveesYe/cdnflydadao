@@ -6,7 +6,7 @@
 
 1.
 0.0.0.0改成(自己搭建的验证服务器Ip)
-vim /etc/hosts
+vi /etc/hosts
 0.0.0.0  auth.cdnfly.cn
 0.0.0.0  auth.cdnfly.cn
 2.
