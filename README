@@ -4,15 +4,15 @@
 
 推荐服务器商；OVZH服务商，官网（https://ovzh.com）
 
-1.
+1.主控服务器
 0.0.0.0改成(自己搭建的验证服务器Ip)
 vi /etc/hosts
 0.0.0.0  auth.cdnfly.cn
 0.0.0.0  auth.cdnfly.cn
-2.
+2.主控
 curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 
-3.
+3.被控
 curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
 
 修改为你自身安装节点,或使用默认的github节点安装
