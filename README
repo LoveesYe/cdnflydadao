@@ -9,9 +9,9 @@ vim /etc/hosts
 0.0.0.0  auth.cdnfly.cn
 0.0.0.0  auth.cdnfly.cn
 2.
-curl curl https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
+curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 3.
-curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
+curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
 
 修改为你自身安装节点,或使用默认的github节点安装
 /opt/cdnfly/master/panel/src/views/system/update/index.html
