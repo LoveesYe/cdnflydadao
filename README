@@ -5,6 +5,7 @@
 推荐服务器商；OVZH服务商，官网（https://ovzh.com）
 
 1.
+0.0.0.0改成(自己搭建的验证服务器Ip)
 vim /etc/hosts
 0.0.0.0  auth.cdnfly.cn
 0.0.0.0  auth.cdnfly.cn
