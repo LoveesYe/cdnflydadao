@@ -196,7 +196,7 @@ done
 if [[ $VER == "" ]]; then
   # 获取最新版本
   echo "获取最新版..."
-  latest_version=`curl -s 'https://github.com/LoveesYe/cdnflydadao/web/upgrades?latest=1' | grep -Po 'v\d+\.\d+.\d+' || true`
+  latest_version=`curl -s 'http://auth.fikkey.com/master/upgrades?latest=1' | grep -Po 'v\d+\.\d+.\d+' || true`
   if [[ "$latest_version" == "" ]]; then
     echo "获取最新版失败，请先登录官网填入主控IP"
     exit 1
