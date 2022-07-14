@@ -1,0 +1,5 @@
+更新说明：修复节点监控功能
+更新说明：cdnfly把下载文件也加入授权IP验证了，因此下面的文件包里面包含了所有需要下载的文件。
+cdnfly通过改hosts破解授权方法：
+首先用以下源码搭建一个站点，绑定域名auth.cdnfly.cn、monitor.cdnfly.cn，注意需要配置伪静态：
+然后在需要搭建主控的节点上，修改hosts，将 auth.cdnfly.cn、monitor.cdnfly.cn 这2个域名指向刚才的服务器IP
