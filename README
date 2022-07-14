@@ -8,8 +8,8 @@
 web目录为验证文件，请自行搭建
 0.0.0.0改成(自己搭建的验证服务器Ip)
 vi /etc/hosts
-0.0.0.0  auth.cdnfly.cn
-0.0.0.0  auth.cdnfly.cn
+0.0.0.0  auth.cdnfly.cn monitor.cdnfly.cn
+0.0.0.0  auth.cdnfly.cn monitor.cdnfly.cn
 2.主控
 curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 
