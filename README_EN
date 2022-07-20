@@ -1,0 +1,49 @@
+Thanks to the big cousin for providing the master control and node server hereby advertised:
+
+Thanks to OK Source Code China Network, (https://vsok.net) Please go to OK Source Code China to download the source code of quality resources
+
+Recommended server provider; OVZH service provider, official website (https://ovzh.com)
+
+1. Master server
+The web directory is the verification file, please build it yourself
+0.0.0.0 changed to (authentication server Ip built by myself)
+vi /etc/hosts
+0.0.0.0 auth.cdnfly.cn monitor.cdnfly.cn
+0.0.0.0 auth.cdnfly.cn monitor.cdnfly.cn
+2. Master control
+curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
+
+3. Charged
+curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/ raw/main/agent/agent.sh -o agent.sh && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es -pwd passwd
+
+Modify to install node yourself, or use the default github node installation
+/opt/cdnfly/master/panel/src/views/system/update/index.html
+
+Thanks to OK Source Code China Network, (https://vsok.net) Please go to OK Source Code China to download the source code of quality resources
+
+Recommended server provider; OVZH service provider, official website (https://ovzh.com) OVZH recent activities: https://reurl.cc/6Z1WWZ
+
+The master login address is: http://master IP/
+Administrator account and password: admin/cdnfly
+Ordinary user account and password: jason/cdnfly
+
+Server Configuration Requirements
+
+master
+1. Memory - Because the main controller is installed with Elasticsearch, 16G and above are recommended. If the website traffic is relatively small, 8G is also fine, at least 4G.
+2. Hard disk - Solid state disk is recommended, and the size of the access log is also considered, 100G and above are recommended, and a small amount is fine.
+3.CPU - CPU with at least 2 cores
+4. Open port 80 88 9200
+node
+
+1. Memory - at least 2G and above
+2. Hard Disk - Configured according to the size of the website cache
+3.CPU - Nginx mainly runs CPU, so if you want to have good access performance, the CPU should be as good as possible.
+4. Open port 80 443 5000
+system
+Support Centos-7---Ubuntu-16.04
+
+Official latest public
+Dear cdnfly users:
+At present, a login security vulnerability has been found, which needs to be temporarily repaired according to the following methods. Find - a domain name that only you know, this domain name is used for administrator login.
+For example, the domain name does not need to include http://, the path is: system management ---> system settings ---> user related, restrict the administrator to only log in from this domain name
