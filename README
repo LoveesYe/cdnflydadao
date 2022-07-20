@@ -41,7 +41,7 @@ curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh 
 3.CPU - Nginx主要是跑CPU，所以要想访问性能好，CPU尽量好点。
 4.开放80 443 5000端口
 系统
-目前仅支持Centos-7(Ubuntu暂时无离线包)
+支持Centos-7---Ubuntu-16.04
 
 官方最新公共
 尊敬的cdnfly用户:
