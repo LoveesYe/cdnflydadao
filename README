@@ -1,3 +1,4 @@
+更新说明：更新v5.1.13版本主控
 感谢大表哥提供主控和节点服务器特此广告：
 
 感谢OK源码中国网提供，（https://vsok.net) 精品资源源码请去OK源码中国下载
@@ -15,6 +16,10 @@ curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.
 
 3.被控
 curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
+4.
+执行以下命令完成破解：
+wget https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/api.py -O /opt/venv/lib/python2.7/site-packages/requests/api.py
+supervisorctl -c /opt/cdnfly/master/conf/supervisord.conf reload
 
 修改为你自身安装节点,或使用默认的github节点安装
 /opt/cdnfly/master/panel/src/views/system/update/index.html
