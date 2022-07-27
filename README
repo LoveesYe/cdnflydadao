@@ -14,8 +14,16 @@ vi /etc/hosts
 2.主控
 curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 
+新v5.1.13版本安装脚本:
+
+curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/master/master.sh
+
 3.被控
 curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
+
+新v5.1.13版本安装脚本:
+curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
+
 4.
 已安装过官方版的开心方法：
 执行以下命令完成开心：
