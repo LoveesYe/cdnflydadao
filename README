@@ -17,9 +17,15 @@ curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.
 3.被控
 curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es-pwd passwd
 4.
-执行以下命令完成破解：
+已安装过官方版的开心方法：
+执行以下命令完成开心：
 wget https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/api.py -O /opt/venv/lib/python2.7/site-packages/requests/api.py
 supervisorctl -c /opt/cdnfly/master/conf/supervisord.conf reload
+
+云端节点监控功能说明：
+
+监控默认是使用云端服务器去请求CDN节点，因此要保持云端和CDN节点之间的网络畅通。另外如果是用宝塔面板，php不要安装bt_safe扩展，否则无法使用tcp类型监控；如果要用ping类型监控，还需要允许exec函数。
+支持多节点监控（和官方一样），要添加其它监控节点，可以编辑config.php配置文件，根据里面的注释说明添加。
 
 修改为你自身安装节点,或使用默认的github节点安装
 /opt/cdnfly/master/panel/src/views/system/update/index.html
