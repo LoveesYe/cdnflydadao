@@ -32,6 +32,8 @@ curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/
 wget https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/api.py -O /opt/venv/lib/python2.7/site-packages/requests/api.py
 supervisorctl -c /opt/cdnfly/master/conf/supervisord.conf reload
 
+如果旧版本要升级，可以先更新自建云端的文件，然后执行“已安装过官方版的开心方法”这一部分的命令，最后在主控后台升级。
+
 云端节点监控功能说明：
 
 监控默认是使用云端服务器去请求CDN节点，因此要保持云端和CDN节点之间的网络畅通。另外如果是用宝塔面板，php不要安装bt_safe扩展，否则无法使用tcp类型监控；如果要用ping类型监控，还需要允许exec函数。
