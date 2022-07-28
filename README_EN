@@ -1,3 +1,5 @@
+Update instructions: Update v5.1.13 version master
+
 Thanks to the big cousin for providing the master control and node server hereby advertised:
 
 Thanks to OK Source Code China Network, (https://vsok.net) Please go to OK Source Code China to download the source code of quality resources
@@ -11,10 +13,32 @@ vi /etc/hosts
 0.0.0.0 auth.cdnfly.cn monitor.cdnfly.cn
 0.0.0.0 auth.cdnfly.cn monitor.cdnfly.cn
 2. Master control
+v5.1.11 version installation script:
 curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 
+New v5.1.13 version installation script:
+
+curl -fsSL https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/master/master.sh -o master.sh && chmod +x master.sh && ./master.sh -- es-dir /home/es
+
 3. Charged
+v5.1.15 version installation script:
 curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/agent/agent.sh -o agent.sh || curl -m 5 https://github.com/LoveesYe/cdnflydadao/ raw/main/agent/agent.sh -o agent.sh && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master-ip ip --es-ip ip --es -pwd passwd
+
+New v5.1.16 version installation script:
+curl -fsSL -m 5 https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/agent/agent.sh -o agent.sh || curl -m 5 https://github. com/LoveesYe/cdnflydadao/raw/main/cdnfly/v5.1.13/agent/agent.sh -o agent.sh && chmod +x agent.sh && ./agent.sh --master-ver v5.1.11 --master -ip ip --es-ip ip --es-pwd passwd
+
+4.
+The happy method that has installed the official version:
+Execute the following command to finish happy:
+wget https://github.com/LoveesYe/cdnflydadao/raw/main/cdnfly/api.py -O /opt/venv/lib/python2.7/site-packages/requests/api.py
+supervisorctl -c /opt/cdnfly/master/conf/supervisord.conf reload
+
+If you want to upgrade the old version, you can first update the files in the self-built cloud, and then execute the command in the section "Happy Ways that have already installed the official version", and finally upgrade in the main control background.
+
+Cloud node monitoring function description:
+
+The default monitoring is to use the cloud server to request the CDN node, so keep the network between the cloud and the CDN node unblocked. In addition, if you use the pagoda panel, do not install the bt_safe extension in php, otherwise you cannot use tcp type monitoring; if you want to use ping type monitoring, you also need to allow the exec function.
+Supports multi-node monitoring (same as the official one). To add other monitoring nodes, you can edit the config.php configuration file and add it according to the comments inside.
 
 Modify to install node yourself, or use the default github node installation
 /opt/cdnfly/master/panel/src/views/system/update/index.html
