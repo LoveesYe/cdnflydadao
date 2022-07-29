@@ -213,7 +213,8 @@ else
     exit 1
   fi
 
-  dir_name="cdnfly-master-$VER"
+  #dir_name="cdnfly-master-$VER"
+  dir_name="cdnfly-master-v5.1.11"
   tar_gz_name="$dir_name-$(get_sys_ver).tar.gz"
   echo "安装指定版本$VER"
 fi
