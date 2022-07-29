@@ -207,7 +207,8 @@ if [[ $MASTER_VER == "" ]]; then
         exit 1
     fi
 
-    dir_name="cdnfly-agent-$AGENT_VER"
+    #dir_name="cdnfly-agent-$AGENT_VER"
+    dir_name="cdnfly-agent-v5.1.15"
     tar_gz_name="$dir_name-$(get_sys_ver).tar.gz"
 
 else
