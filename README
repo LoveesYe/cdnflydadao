@@ -1,10 +1,6 @@
 更新说明：更新v5.1.13版本主控
 感谢大表哥提供主控和节点服务器特此广告：
 
-感谢OK源码中国网提供，（https://vsok.net) 精品资源源码请去OK源码中国下载
-
-推荐服务器商；OVZH服务商，官网（https://ovzh.com）
-
 1.主控服务器
 web目录为验证文件，请自行搭建
 0.0.0.0改成(自己搭建的验证服务器Ip)
@@ -42,9 +38,6 @@ supervisorctl -c /opt/cdnfly/master/conf/supervisord.conf reload
 修改为你自身安装节点,或使用默认的github节点安装
 /opt/cdnfly/master/panel/src/views/system/update/index.html
 
-感谢OK源码中国网提供，（https://vsok.net) 精品资源源码请去OK源码中国下载
-
-推荐服务器商；OVZH服务商，官网（https://ovzh.com） OVZH最近活动: https://reurl.cc/6Z1WWZ
 
 主控登录地址为: http://主控IP/
 管理员账号和密码： admin/cdnfly
