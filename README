@@ -126,3 +126,35 @@ ps aux | grep [/]usr/local/openresty/nginx/sbin/nginx | awk '{print $2}'  | xarg
 supervisorctl restart filebeat
 supervisorctl restart agent
 supervisorctl restart task
+
+主控更换ip后节点修改命令
+
+new_master_ip="这里替换为主控IP"
+(后台系统升级里查看es_pwd密码)
+es_pwd="这里替换为es密码"
+
+sed -i "s/ES_IP =.*/ES_IP = \"$new_master_ip\"/" /opt/cdnfly/agent/conf/config.py
+
+sed -i "s/MASTER_IP.*/MASTER_IP = \"$new_master_ip\"/g" /opt/cdnfly/agent/conf/config.py
+
+sed -i "s/hosts:.*/hosts: [\"$new_master_ip:9200\"]/" /opt/cdnfly/agent/conf/filebeat.yml
+
+chattr -i /usr/local/openresty/nginx/conf/ /usr/local/openresty/nginx/conf/listen_80.conf /usr/local/openresty/nginx/conf/listen_other.conf
+
+sed -i "s#http://.*:88#http://$new_master_ip:88#" /usr/local/openresty/nginx/conf/listen_80.conf /usr/local/openresty/nginx/conf/listen_other.conf
+
+chattr +i /usr/local/openresty/nginx/conf/ /usr/local/openresty/nginx/conf/listen_80.conf /usr/local/openresty/nginx/conf/listen_other.conf
+
+sed -i "s/ES_PWD =.*/ES_PWD = \"$es_pwd\"/" /opt/cdnfly/agent/conf/config.py
+
+sed -i "s/password:.*/password: \"$es_pwd\"/" /opt/cdnfly/agent/conf/filebeat.yml
+
+sed -i "s/agent-pwd:.*/agent-pwd: \"$es_pwd\"/" /opt/cdnfly/agent/conf/filebeat.yml
+
+ps aux | grep [/]usr/local/openresty/nginx/sbin/nginx | awk '{print $2}'  | xargs kill -HUP ||  true
+
+supervisorctl -c /opt/cdnfly/agent/conf/supervisord.conf restart filebeat
+
+supervisorctl -c /opt/cdnfly/agent/conf/supervisord.conf restart agent
+
+supervisorctl -c /opt/cdnfly/agent/conf/supervisord.conf restart task
